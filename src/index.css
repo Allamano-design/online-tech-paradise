@@ -2,39 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Tech Paradise Design System - Modern e-commerce theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Tech-inspired primary colors */
+    --primary: 211 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 211 85% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 211 85% 55%;
+
+    /* Tech Paradise specific colors */
+    --tech-gradient-start: 211 85% 55%;
+    --tech-gradient-end: 195 85% 65%;
+    --hero-gradient-start: 215 30% 8%;
+    --hero-gradient-end: 211 85% 15%;
+    --card-hover: 210 100% 98%;
+    --success: 142 85% 55%;
+    --warning: 45 85% 55%;
+
+    /* Shadows and effects */
+    --shadow-soft: 0 4px 6px -1px hsl(215 25% 11% / 0.1);
+    --shadow-medium: 0 10px 15px -3px hsl(215 25% 11% / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--tech-gradient-start)), hsl(var(--tech-gradient-end)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9), hsl(210 20% 98% / 0.6));
 
     --radius: 0.5rem;
 
