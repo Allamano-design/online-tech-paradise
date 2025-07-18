@@ -1,24 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>online-tech-paradise</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Paradise - Premium Laptops</title>
+    <meta name="description" content="Discover the latest laptops with cutting-edge technology, premium quality, and unbeatable prices at Tech Paradise.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons (Lucide icons CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="#" class="logo-link">
+                    <div class="logo-icon">
+                        <i data-lucide="laptop"></i>
+                    </div>
+                    <span class="logo-text">Tech Paradise</span>
+                </a>
 
-    <meta property="og:title" content="online-tech-paradise" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <!-- Desktop Navigation -->
+                <div class="nav-links desktop-nav">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Shop</a>
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="search" placeholder="Search laptops..." class="search-input">
+                    </div>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Right Actions -->
+                <div class="nav-actions">
+                    <button class="nav-button login-btn desktop-only">
+                        <i data-lucide="user"></i>
+                        <span>Login</span>
+                    </button>
+                    
+                    <button class="nav-button cart-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-badge">3</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="nav-button mobile-menu-btn mobile-only" id="mobileMenuBtn">
+                        <i data-lucide="menu" id="menuIcon"></i>
+                        <i data-lucide="x" id="closeIcon" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <a href="#" class="mobile-nav-link">Home</a>
+                    <a href="#" class="mobile-nav-link">Shop</a>
+                    <a href="#" class="mobile-nav-link">Categories</a>
+                    <a href="#" class="mobile-nav-link">Contact</a>
+                    <div class="mobile-login">
+                        <button class="mobile-login-btn">
+                            <i data-lucide="user"></i>
+                            <span>Login</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
+        
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Welcome to
+                            <span class="hero-title-gradient">Tech Paradise</span>
+                        </h1>
+                        <p class="hero-description">
+                            Discover the latest laptops with cutting-edge technology, premium quality, and unbeatable prices.
+                        </p>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">
+                            Shop Now
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn btn-outline">
+                            View Categories
+                        </button>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i data-lucide="star" class="feature-icon star"></i>
+                            <span>4.9/5 Rating</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="shield" class="feature-icon shield"></i>
+                            <span>2 Year Warranty</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="truck" class="feature-icon truck"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <img src="src/assets/hero-laptop.jpg" alt="Premium laptop showcase" class="hero-image">
+                        <div class="hero-image-overlay"></div>
+                    </div>
+                    
+                    <!-- Floating stats cards -->
+                    <div class="stat-card stat-card-1">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-text">Happy Customers</div>
+                    </div>
+                    
+                    <div class="stat-card stat-card-2">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text">Laptop Models</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Laptops</h2>
+                <p class="section-description">
+                    Discover our hand-picked selection of premium laptops with the latest technology and best performance.
+                </p>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+
+            <div class="section-footer">
+                <button class="btn btn-outline-large">
+                    View All Products
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-description">
+                    Find the perfect laptop for your specific needs and budget.
+                </p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <h3 class="category-title">Business Laptops</h3>
+                    <p class="category-description">Professional laptops for productivity and work</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <h3 class="category-title">Gaming Laptops</h3>
+                    <p class="category-description">High-performance laptops for gaming enthusiasts</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h3 class="category-title">Student Laptops</h3>
+                    <p class="category-description">Affordable and reliable laptops for students</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="category-title">Creative Laptops</h3>
+                    <p class="category-description">Powerful laptops for designers and creators</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i data-lucide="laptop"></i>
+                        </div>
+                        <span class="footer-logo-text">Tech Paradise</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted destination for premium laptops with cutting-edge technology and unbeatable prices.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Business Laptops</a></li>
+                        <li><a href="#" class="footer-link">Gaming Laptops</a></li>
+                        <li><a href="#" class="footer-link">Student Laptops</a></li>
+                        <li><a href="#" class="footer-link">Creative Laptops</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Warranty</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Tech Paradise. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
